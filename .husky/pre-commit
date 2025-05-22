@@ -1,0 +1,14 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+echo "🔍 Running pre-commit checks..."
+
+cd calalton
+
+# Only run eslint & prettier on staged files
+npx lint-staged || exit 1
+
+# Full project type check (not just staged files)
+bun run type-check || exit 1
+
+echo "✅ Pre-commit passed"

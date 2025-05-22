@@ -1,3 +1,4 @@
 {
-  "*.{ts,tsx}": ["bunx eslint --fix"]
+  "*.{ts,tsx,js,jsx}": ["bunx eslint --fix", "bunx prettier --write"],
+  "*.{json,md,css,html}": ["bunx prettier --write"]
 }

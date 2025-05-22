@@ -1,0 +1,13 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+echo "🚀 Running pre-push checks..."
+
+cd calalton
+
+bun run type-check || exit 1
+bun run build || exit 1
+# Uncomment if tests exist
+# bun run test || exit 1
+
+echo "✅ Pre-push passed"
