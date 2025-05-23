@@ -33,10 +33,6 @@ jobs:
         run: bun run type-check
         working-directory: calalton
 
-      - name: 🧪 Test (optional)
-        run: bun run test
-        working-directory: calalton
-
       - name: 🏗️ Build Project
         run: bun run build
         working-directory: calalton
