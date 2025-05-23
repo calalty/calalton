@@ -4,7 +4,7 @@ import { Copy } from 'lucide-react';
 import { StatusLabel } from '../ui/status-label';
 
 export const HeroSection = () => (
-  <section className="py-16 px-8">
+  <section className="py-12 px-8">
     <div className="flex items-center justify-between mb-8">
       <StatusLabel label="Software Engineer" />
 

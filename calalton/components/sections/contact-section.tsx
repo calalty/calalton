@@ -14,9 +14,8 @@ export const ContactSection = () => (
           Let&apos;s build something clever
         </h2>
         <p className="text-gray-600 mb-6">
-          Have a project in mind? I&apos;d love to hear about it. Whether you
-          want to discuss an opportunity or just have a conversation about
-          technology, feel free to reach out.
+          Have a project in mind? Whether you want to discuss an opportunity or
+          just have a conversation about technology, feel free to reach out.
         </p>
 
         <Image
@@ -52,7 +51,7 @@ export const ContactSection = () => (
                 className={`border-gray-200 focus-visible:ring-gray-500 ${additionalClassName}`}
               />
             </div>
-          ),
+          )
         )}
 
         <ActionButton className="w-full" icon={<Send className="h-4 w-4" />}>
