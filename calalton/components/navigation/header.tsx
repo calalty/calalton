@@ -4,7 +4,7 @@ import { Link as LinkIcon } from 'lucide-react';
 import { IconLink } from '../ui/icon-link';
 
 export const Header = () => (
-  <header className="max-w-4xl w-full m-auto bg-white py-4 px-6 shadow-sm z-10 rounded-lg mt-4">
+  <header className="max-w-3xl w-full m-auto bg-white py-4 px-6 shadow-sm z-10 rounded-lg mt-4">
     <div className="w-full flex items-center justify-between">
       <nav className="flex items-center space-x-6">
         {headerIcons.map(({ icon, key }) => (

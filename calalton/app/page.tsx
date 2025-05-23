@@ -12,7 +12,7 @@ export default function Home() {
     <div className="flex flex-col gap-4 min-h-full bg-gray-50 relative">
       <Header />
 
-      <main className="flex flex-col gap-4 max-w-4xl mx-auto px-6 bg-background min-h-screen shadow-sm relative z-10 rounded-lg mb-4">
+      <main className="flex flex-col gap-4 max-w-3xl mx-auto px-6 bg-background min-h-screen shadow-sm relative z-10 rounded-lg mb-4">
         <HeroSection />
         <AboutSection />
         <ProjectsSection />
