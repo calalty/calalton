@@ -20,17 +20,25 @@ jobs:
         with:
           bun-version: latest
 
+      - name: 💾 Restore Bun Cache
+        uses: actions/cache@v3
+        with:
+          path: ~/.bun/install/cache
+          key: ${{ runner.os }}-bun-${{ hashFiles('calalton/bun.lockb') }}
+          restore-keys: |
+            ${{ runner.os }}-bun-
+
       - name: 📦 Install Dependencies
-        run: bun install
+        run: bun install --frozen-lockfile
 
       - name: 🧹 Run Linter
         run: bun run lint
 
       - name: 🧠 Type Check
-        run: bunx tsc --noEmit
+        run: bun run type-check
 
       - name: ⚖️ Format Check
-        run: bun run format:check || echo "Prettier check failed"
+        run: bun run format:check
 
       - name: 🏗️ Build
         run: bun run build
